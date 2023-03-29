@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private ListView listView;
-    private List<Note> items = new ArrayList<>();
+    public static List<Note> items = new ArrayList<>();
     //private ArrayAdapter<String> adapter;
     private MyAdapter myAdapter;
     @Override
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             // navigate to next screen (Activity)
             Intent intent = new Intent(this,DetailActivity.class);
             // provide the data as well.
-            intent.putExtra("thekey", textView.getText().toString());
+            intent.putExtra("thekey", position);
             startActivity(intent);
         });
     }

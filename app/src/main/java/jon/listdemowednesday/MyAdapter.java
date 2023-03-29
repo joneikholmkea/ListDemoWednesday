@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -37,6 +38,8 @@ public class MyAdapter extends BaseAdapter {
         // add stuff
         TextView textView = linearLayout.findViewById(R.id.textView);
         textView.setText(list.get(position).getText());
+        ImageView imageView = linearLayout.findViewById(R.id.imageView);
+        imageView.setImageResource(list.get(position).getImage());
         return linearLayout;
     }
 }
